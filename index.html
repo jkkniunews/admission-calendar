@@ -1,12 +1,103 @@
-# অগ্নীবিনা বিশ্ববিদ্যালয় ভর্তি কোচিং
-
-## 📅 ভর্তি পরীক্ষার ক্যালেন্ডার
-
-তারিখ ও সময় বাকির লাইভ কাউন্টডাউন
-
-⚠️ ইউজিসি জানিয়েছে সব পাবলিক বিশ্ববিদ্যালয়ের পরীক্ষা ১ ফেব্রুয়ারির পরে হবে। তবে ঢাবি ও বুয়েট আগের তারিখেই পরীক্ষা নিচ্ছে, আর অন্যরা একে একে সময়সূচি বদলাচ্ছে। তাই তারিখ বদলাতে পারে। সর্বশেষ আপডেট: ১৬ নভেম্বর ২০২৬।
-
-| বিশ্ববিদ্যালয় ও ইউনিট | পরীক্ষার তারিখ | সময় বাকি |
-| --- | --- | --- |
-
-তথ্য যাচাই করে নিন। নতুন পরীক্ষা যোগ করতে exams তালিকা এডিট করুন।
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>অগ্নীবিনা বিশ্ববিদ্যালয় ভর্তি কোচিং | ভর্তি পরীক্ষার ক্যালেন্ডার</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>">
+<style>
+:root{--bg:#f4effd;--card:#fff;--ink:#2b1a4f;--mute:#6b5d8a;--line:#d9c9f5;--head:#7c4dff;--soft:#efe6ff;--hot:#e53935;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17102b;--card:#241a3f;--ink:#f1eaff;--mute:#b3a4d6;--line:#3d2f66;--head:#9b7bff;--soft:#2e2250;--hot:#ff6b66;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17102b;--card:#241a3f;--ink:#f1eaff;--mute:#b3a4d6;--line:#3d2f66;--head:#9b7bff;--soft:#2e2250;--hot:#ff6b66;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Bengali","Hind Siliguri",system-ui,sans-serif;padding:16px}
+.wrap{max-width:760px;margin:0 auto}
+h1{font-size:1.3rem;margin:4px 0 2px}
+.sub{color:var(--mute);font-size:.85rem;margin-bottom:14px}
+.next{background:var(--head);color:#fff;border-radius:16px;padding:14px 16px;margin-bottom:14px}
+.next small{opacity:.85}
+.next b{display:block;font-size:1.05rem;margin:2px 0 6px}
+.next .t{font-size:1.4rem;font-weight:700}
+input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:inherit;margin-bottom:12px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+table{width:100%;border-collapse:collapse;min-width:520px}
+th{background:var(--soft);text-align:left;padding:10px 12px;font-size:.85rem;color:var(--head)}
+td{padding:10px 12px;border-top:1px solid var(--line);font-size:.9rem;vertical-align:top}
+td .u{color:var(--mute);font-size:.8rem}
+td.cd{font-weight:600;white-space:nowrap}
+tr.soon td.cd{color:var(--hot)}
+tr.done{opacity:.5}
+.note{color:var(--head);font-size:.75rem;margin-top:2px}.warn{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:.8rem;margin-bottom:12px}.foot{color:var(--mute);font-size:.75rem;margin-top:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1 style="font-size:1.5rem;color:var(--head);margin-bottom:0">অগ্নীবিনা বিশ্ববিদ্যালয় ভর্তি কোচিং</h1>
+<h2 style="font-size:1rem;margin:2px 0 0">📅 ভর্তি পরীক্ষার ক্যালেন্ডার</h2>
+<div class="sub">তারিখ ও সময় বাকির লাইভ কাউন্টডাউন</div>
+<div class="warn">⚠️ ইউজিসি জানিয়েছে সব পাবলিক বিশ্ববিদ্যালয়ের পরীক্ষা ১ ফেব্রুয়ারির পরে হবে। তবে ঢাবি ও বুয়েট আগের তারিখেই পরীক্ষা নিচ্ছে, আর অন্যরা একে একে সময়সূচি বদলাচ্ছে। তাই তারিখ বদলাতে পারে। সর্বশেষ আপডেট: ১৬ নভেম্বর ২০২৬।</div>
+<div class="next" id="next"></div>
+<input id="q" placeholder="খুঁজুন: ঢাকা, মেডিকেল, BUP...">
+<div class="tbl"><table>
+<thead><tr><th>বিশ্ববিদ্যালয় ও ইউনিট</th><th>পরীক্ষার তারিখ</th><th>সময় বাকি</th></tr></thead>
+<tbody id="rows"></tbody>
+</table></div>
+<div class="foot">তথ্য যাচাই করে নিন। নতুন পরীক্ষা যোগ করতে exams তালিকা এডিট করুন।</div>
+</div>
+<script>
+// ===== এখানে পরীক্ষা যোগ/পরিবর্তন করুন: [নাম, ইউনিট, "বছর-মাস-দিন", "ঘণ্টা:মিনিট" (২৪ ঘণ্টা)] =====
+const exams=[
+["ঢাকা বিশ্ববিদ্যালয়","IBA","2026-12-05","10:00"],
+["ঢাকা বিশ্ববিদ্যালয়","A Unit (বিজ্ঞান)","2026-12-12","11:00"],
+["ঢাকা বিশ্ববিদ্যালয়","A Unit (Arts & Commerce)","2026-12-12","11:00"],
+["মেডিকেল ও ডেন্টাল","MBBS/BDS","2026-12-18","10:00"],
+["ঢাকা বিশ্ববিদ্যালয়","B Unit (মানবিক)","2026-12-19","11:00"],
+["ঢাকা বিশ্ববিদ্যালয়","চ ইউনিট (চারুকলা)","2026-12-22","11:00"],
+["ঢাকা বিশ্ববিদ্যালয়","C Unit (বাণিজ্য)","2026-12-26","11:00"],
+["ঢাকা বিশ্ববিদ্যালয়","C Unit (Science & Arts)","2026-12-26","11:00"],
+["মেরিটাইম বিশ্ববিদ্যালয়","FMGP","2026-12-29","10:00"],
+["মেরিটাইম বিশ্ববিদ্যালয়","FSA","2026-12-29","15:00"],
+["মেরিটাইম বিশ্ববিদ্যালয়","FEOS","2026-12-30","10:00"],
+["মেরিটাইম বিশ্ববিদ্যালয়","FET","2026-12-30","15:00"],
+["জগন্নাথ বিশ্ববিদ্যালয়","A Unit (বিজ্ঞান)","2027-01-01","10:00"],
+["কৃষি গুচ্ছ","সমন্বিত কৃষি","2027-01-02","10:00"],
+["BUP","FASS (Arts)","2027-01-02","15:00"],
+["কুয়েট","KUET","2027-01-08","10:00","প্রকৌশল"],
+["জাহাঙ্গীরনগর বিশ্ববিদ্যালয়","ভর্তি পরীক্ষা শুরু (১০–২১ জানুয়ারি)","2027-01-10","","আবেদন ১৫ ডিসেম্বরে শেষ"],
+["জগন্নাথ বিশ্ববিদ্যালয়","E Unit","2027-01-08","","আবেদন ২৫ নভেম্বর–১০ ডিসেম্বর"],
+["রুয়েট","RUET","2027-01-14","","সম্ভাব্য তারিখ, চূড়ান্ত নয়"],
+["জগন্নাথ বিশ্ববিদ্যালয়","B Unit","2027-01-15","",""],
+["বুয়েট","BUET","2027-01-16","","আবেদন শুরু ২১ নভেম্বর"],
+["শাবিপ্রবি (SUST)","ভর্তি পরীক্ষা (১৭–১৮ জানুয়ারি)","2027-01-17","","ভর্তি কমিটির সভায় পরিবর্তন হতে পারে"],
+["জগন্নাথ বিশ্ববিদ্যালয়","C Unit","2027-01-22","",""],
+["জগন্নাথ বিশ্ববিদ্যালয়","D Unit","2027-01-23","",""],
+["চুয়েট","CUET","2027-01-23","","সম্ভাব্য তারিখ, চূড়ান্ত নয়"],
+["চট্টগ্রাম বিশ্ববিদ্যালয়","ভর্তি পরীক্ষা শুরু (২৯ জানুয়ারি–৮ ফেব্রুয়ারি)","2027-01-29","","আবেদন ১০ ডিসেম্বর–১০ জানুয়ারি"],
+["বুটেক্স","BSc টেক্সটাইল ইঞ্জিনিয়ারিং","2027-01-29","",""],
+["বাংলাদেশ এভিয়েশন অ্যান্ড অ্যারোস্পেস বিশ্ববিদ্যালয়","AAUB","2027-01-30","",""],
+["খুলনা বিশ্ববিদ্যালয়","ভর্তি পরীক্ষা (৪–৫ ফেব্রুয়ারি)","2027-02-04","","আগে ডিসেম্বরে ছিল, পিছিয়েছে"],
+["কুমিল্লা বিশ্ববিদ্যালয়","ভর্তি পরীক্ষা (৫–৭ ফেব্রুয়ারি)","2027-02-05","","আবেদন ১০–৩১ ডিসেম্বর"],
+["রাজশাহী বিশ্ববিদ্যালয়","B Unit (বাণিজ্য), ১২–২০ ফেব্রুয়ারি","2027-02-12","","জানুয়ারি থেকে পিছিয়েছে"],
+["গুচ্ছ (GST) — ২০ বিশ্ববিদ্যালয়","B Unit (মানবিক)","2027-03-19","","আয়োজক: পবিপ্রবি"],
+["গুচ্ছ (GST) — ২০ বিশ্ববিদ্যালয়","C (বাণিজ্য) ও D (আর্কিটেকচার)","2027-03-20","",""],
+["গুচ্ছ (GST) — ২০ বিশ্ববিদ্যালয়","A Unit (বিজ্ঞান)","2027-03-27","",""]
+];
+const bn=s=>String(s).replace(/\d/g,d=>"০১২৩৪৫৬৭৮৯"[d]);
+const mon=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const list=exams.map(([n,u,d,t,note])=>({n,u,d,t,note,ts:new Date(d+"T"+(t||"00:00")+":00+06:00").getTime()})).sort((a,b)=>a.ts-b.ts);
+function fmtDate(e){const[y,m,d]=e.d.split("-");const dt=bn(d)+" "+mon[+m-1]+" "+bn(y);if(!e.t)return dt;const[h,mi]=e.t.split(":");const H=+h%12||12;return dt+", "+bn(String(H).padStart(2,"0"))+":"+bn(mi)+(+h<12?" am":" pm")}
+function left(ts){let s=Math.floor((ts-Date.now())/1000);if(s<=0)return null;const d=Math.floor(s/86400);s%=86400;const h=Math.floor(s/3600);s%=3600;return bn(d)+" দিন "+bn(h)+" ঘণ্টা "+bn(Math.floor(s/60))+" মি. "+bn(s%60)+" সে."}
+const tb=document.getElementById("rows"),q=document.getElementById("q");
+function render(){
+const f=q.value.trim().toLowerCase();
+tb.innerHTML=list.filter(e=>(e.n+" "+e.u).toLowerCase().includes(f)).map(e=>{
+const l=left(e.ts),soon=l&&e.ts-Date.now()<7*864e5;
+return `<tr class="${l?(soon?"soon":""):"done"}"><td>${e.n}<div class="u">${e.u}</div>${e.note?`<div class="note">${e.note}</div>`:""}</td><td>${fmtDate(e)}</td><td class="cd">${l||"শেষ হয়েছে"}</td></tr>`}).join("")||'<tr><td colspan="3">কিছু পাওয়া যায়নি</td></tr>';
+const nx=list.find(e=>e.ts>Date.now());
+document.getElementById("next").innerHTML=nx?`<small>সবচেয়ে কাছের পরীক্ষা</small><b>${nx.n} — ${nx.u}</b><div class="t">${left(nx.ts)}</div>`:"সব পরীক্ষা শেষ";
+}
+q.addEventListener("input",render);render();setInterval(render,1000);
+</script>
+</body>
+</html>
